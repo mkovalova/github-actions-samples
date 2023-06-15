@@ -11,6 +11,6 @@ jobs:
     steps:
     - uses: actions/first-interaction@v1
       with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
-        issue-message: 'Hello Sasha!!! This is your first issue!'
-        pr-message: 'Hello Sasha!!!! This is your first PR!'
+        repo-token: ${{ secrets.MY_GITHUB_TOKEN }}
+        issue-message: 'Hello Marianna!!! This is your first issue!'
+        pr-message: 'Hello Marianna!!!! This is your first PR!'
