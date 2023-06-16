@@ -103,6 +103,9 @@ jobs:
       run: |
         gcloud container clusters get-credentials "$GKE_CLUSTER" --region "$GKE_REGION"
 
+    - name: Check kubectl version
+      run: kubectl version --client
+
     - name: Create namespace & set in Kustomize
       run: |
          namespacePresentBlue=`kubectl get ns | grep python-app-blue | wc -l`
