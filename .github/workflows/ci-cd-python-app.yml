@@ -163,8 +163,9 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git commit -am "Bump docker tag"
+    
     - name: Pull latest changes
-  run: git pull origin main
+      run: git pull origin main
 
     - name: Resolve conflicts automatically
       run: |
