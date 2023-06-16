@@ -106,6 +106,9 @@ jobs:
     - name: Check kubectl version
       run: kubectl version --client
 
+    - name: Install gke-gcloud-auth-plugin
+      run: gcloud components install gke-gcloud-auth-plugin
+
     - name: Create namespace & set in Kustomize
       run: |
          namespacePresentBlue=`kubectl get ns | grep python-app-blue | wc -l`
