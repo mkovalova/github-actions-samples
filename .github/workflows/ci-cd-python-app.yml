@@ -163,7 +163,21 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git commit -am "Bump docker tag"
-        
+    - name: Pull latest changes
+  run: git pull origin main
+
+    - name: Resolve conflicts automatically
+      run: |
+        git checkout ${{ github.base_ref }}
+        git merge --strategy-option=ours ${{ github.head_ref }}
+        git pushAdd the necessary steps to resolve conflicts manually
+
+    - name: Add changes to staging
+      run: git add .
+
+    - name: Commit resolved changes
+      run: git commit -m "Resolved conflicts"
+    
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
