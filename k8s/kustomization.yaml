@@ -8,4 +8,4 @@ namespace: hello-gitops
 images:
 - name: hello-gitops
   newName: mkovalova/hello-gitops
-  newTag: 3cedf68bb8e1557160f0e1bdca70d683557e665b
+  newTag: 3d9f1d859714090954b9d94912142a003b56ad16
