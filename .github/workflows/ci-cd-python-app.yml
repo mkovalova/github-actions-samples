@@ -170,8 +170,8 @@ jobs:
     - name: Resolve conflicts automatically
       run: |
         git checkout ${{ github.base_ref }}
-        git merge --strategy-option=ours ${{ github.head_ref }}
-        git pushAdd the necessary steps to resolve conflicts manually
+        git merge --strategy-option=recursive -Xtheirs ${{ github.head_ref }}
+        git push
 
     - name: Add changes to staging
       run: git add .
