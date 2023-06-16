@@ -164,20 +164,20 @@ jobs:
         git config --local user.name "GitHub Action"
         git commit -am "Bump docker tag"
     
-    - name: Pull latest changes
-      run: git pull
+    # - name: Pull latest changes
+    #   run: git pull
 
-    - name: Resolve conflicts automatically
-      run: |
-        git checkout ${{ github.base_ref }}
-        git merge --strategy-option=recursive -Xtheirs ${{ github.head_ref }}
-        git push
+    # - name: Resolve conflicts automatically
+    #   run: |
+    #     git checkout ${{ github.base_ref }}
+    #     git merge --strategy-option=recursive -Xtheirs ${{ github.head_ref }}
+    #     git push
 
-    - name: Add changes to staging
-      run: git add .
+    # - name: Add changes to staging
+    #   run: git add .
 
-    - name: Commit resolved changes
-      run: git commit -m "Resolved conflicts"
+    # - name: Commit resolved changes
+    #   run: git commit -m "Resolved conflicts"
     
     - name: Push changes
       uses: ad-m/github-push-action@master
