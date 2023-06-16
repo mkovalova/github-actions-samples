@@ -165,7 +165,7 @@ jobs:
         git commit -am "Bump docker tag"
     
     - name: Pull latest changes
-      run: git pull origin main
+      run: git pull
 
     - name: Resolve conflicts automatically
       run: |
